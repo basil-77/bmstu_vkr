@@ -22,10 +22,10 @@ def plot_result(image_clear, image_noised, image_reconstructed, max_value=255):
     plt.title(f'Ground True')
     plt.subplot(1,3,2)
     plt.imshow(image_noised)
-    plt.title(f'Noised, PSNR={tf.image.psnr(image_clear, image_noised, max_val=max_value)}')
+    plt.title(f'Noised, PSNR={tf.image.psnr(image_clear, image_noised, max_val=max_value):.2f}, SSIM={tf.image.ssim(image_clear, image_noised, max_val=max_value):.2f}')
     plt.subplot(1,3,3)
     plt.imshow(image_reconstructed)
-    plt.title(f'Reconstructed, PSNR={tf.image.psnr(image_clear, image_reconstructed, max_val=max_value)}')
+    plt.title(f'Reconstructed, PSNR={tf.image.psnr(image_clear, image_reconstructed, max_val=max_value):.2f}, SSIM={tf.image.ssim(image_clear, image_reconstructed, max_val=max_value):.2f}')
     
 def calc_mean_image_metrics(images_clear, images_reconstructed, max_value):
     psnrs = []
