@@ -6,7 +6,9 @@ An important part of the work was the construction of a noise model based on rea
 Good results were also obtained when applying the network trained on the built noise model to real noisy images taken by various models of digital cameras.
 
 files:
+
 ae.ipynb - Autoencoder
+
 dncnn_res.ipynb - modified dnCNN
 dncnn_res_final_real_noise050.ipynb - the final version of "res dnCNN", trained on the real noise model
 im_prep.ipynb - nosy images preparing using gauss noise
